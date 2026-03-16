@@ -313,89 +313,32 @@ curl http://localhost:5001/health
 
 ### Backend
 
-Tecnologia
-
-Versão
-
-Uso
-
-**Python**
-
-3.8+
-
-Linguagem principal
-
-**Flask**
-
-3.0
-
-Framework web
-
-**Flask-CORS**
-
-4.0
-
-Suporte a CORS
-
-**Pytest**
-
-7.4
-
-Testes unitários
-
-**python-dotenv**
-
-1.0
-
-Configurações
+| Tecnologia | Versão | Uso |
+| :--- | :---: | ---: |
+| **Python** | 3.8+ | Linguagem principal |
+| **Flask** | 3.0 | Framework web |
+| **Flask-CORS** | 4.0 | Suporte a CORS |
+| **Pytest** | 7.4 | Testes unitários |
+|**python-dotenv** | 1.0 | Configurações |
 
 ### Frontend
 
-Tecnologia
-
-Uso
-
-**HTML5**
-
-Estrutura das páginas
-
-**CSS3**
-
-Estilização e animações
-
-**JavaScript**
-
-Interatividade e chamadas API
-
-**Font Awesome**
-
-Ícones profissionais
-
-**Google Fonts (Inter)**
-
-Tipografia moderna
+| Tecnologia | Uso |
+| :--- | :---: |
+| **HTML5** | Estrutura das páginas |
+| **CSS3** | Estilização e animações |
+| **JavaScript** | Interatividade e chamadas API |
+| **Font Awesome** | Ícones profissionais |
+| **Google Fonts (Inter)** | Tipografia moderna |
 
 ### Ferramentas de Desenvolvimento
 
-Ferramenta
-
-Uso
-
-**Git**
-
-Controle de versão
-
-**GitHub Actions**
-
-CI/CD (em breve)
-
-**Postman**
-
-Testes de API
-
-**VSCode**
-
-Editor recomendado
+| Ferramenta | Uso |
+| :--- | :---: |
+| **Git** | Controle de versão |
+| **GitHub Actions** | CI/CD (em breve) |
+| **Postman** | Testes de API |
+| **VSCode** | Editor recomendado |
 
 ----------
 
@@ -403,57 +346,21 @@ Editor recomendado
 
 ### Tempos de Resposta
 
-Operação
-
-Tempo Médio
-
-Percentil 95
-
-Análise simples
-
-45ms
-
-78ms
-
-Análise com contexto
-
-72ms
-
-112ms
-
-Health check
-
-8ms
-
-15ms
-
-Carregamento front-end
-
-0.8s
-
-1.2s
+| Operação | Tempo Médio | Percentil 95 |
+| :--- | :---: | ---: |
+| Análise simples | 45ms | 78ms |
+| Análise com contexto | 72ms | 112ms |
+| Health check | 8ms | 15ms |
+| Carregamento front-end | 0.8s | 1.2s |
 
 ### Cobertura de Testes
 
-Módulo
-
-Cobertura
-
-Heurísticas
-
-100%
-
-Analisador
-
-95%
-
-API
-
-90%
-
-**Total**
-
-**95%**
+| Módulo | Cobertura |
+| :--- | :---: |
+| Heurísticas | 100% |
+| Analisador | 95% |
+| API | 90% |
+|**Total** | **95%** |
 
 ----------
 
