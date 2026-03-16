@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassCheck Pro - Analisador de Senhas</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Max <span class="pro">Muller</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Início</a>
+                <a href="#about">Sobre</a>
+                <a href="#docs">Documentação</a>
+                <a href="https://github.com/MMVonnSeek/" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Análise Avançada de <span class="gradient-text">Senhas</span></h1>
+                <p>Descubra a real força das suas senhas com heurísticas avançadas que simulam técnicas reais de ataque.</p>
+                
+                <!-- Métricas -->
+                <div class="metrics">
+                    <div class="metric-item">
+                        <div class="metric-value">5+</div>
+                        <div class="metric-label">Heurísticas</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Análise Local</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">API</div>
+                        <div class="metric-label">REST Full</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card Principal de Análise -->
+            <div class="analyzer-card">
+                <h2>Teste sua senha agora</h2>
+                <p class="card-subtitle">Análise em tempo real com feedback detalhado</p>
+                
+                <div class="input-group">
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" placeholder="Digite sua senha..." class="password-input">
+                        <button class="toggle-password" onclick="togglePassword()">
+                            <i class="far fa-eye" id="toggleIcon"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Strength Meter -->
+                    <div class="strength-meter">
+                        <div class="meter-bar">
+                            <div class="meter-fill" id="meterFill" style="width: 0%;"></div>
+                        </div>
+                        <div class="strength-label" id="strengthLabel">Aguardando...</div>
+                    </div>
+                    
+                    <!-- Opções avançadas (collapse) -->
+                    <div class="advanced-options">
+                        <button class="advanced-toggle" onclick="toggleAdvanced()">
+                            <i class="fas fa-chevron-down" id="advancedIcon"></i>
+                            Opções avançadas (contexto pessoal)
+                        </button>
+                        
+                        <div class="advanced-content" id="advancedContent">
+                            <div class="info-note">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Adicione informações pessoais para simular um ataque direcionado</span>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label><i class="fas fa-user"></i> Nome</label>
+                                    <input type="text" id="personalName" placeholder="Ex: Max Muller">
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-calendar"></i> Data Nasc.</label>
+                                    <input type="text" id="personalBirth" placeholder="Ex: 1990">
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-envelope"></i> Email</label>
+                                    <input type="email" id="personalEmail" placeholder="Ex: maxmuller@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-building"></i> Empresa</label>
+                                    <input type="text" id="personalCompany" placeholder="Ex: Minha Empresa">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="analyze-btn" onclick="analyzePassword()">
+                        <i class="fas fa-search"></i>
+                        Analisar Senha
+                    </button>
+                </div>
+                
+                <!-- Loading -->
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <span>Analisando...</span>
+                </div>
+                
+                <!-- Resultados -->
+                <div class="results" id="results"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="container">
+            <h2 class="section-title">Heurísticas Avançadas</h2>
+            <p class="section-subtitle">Vamos além da análise tradicional</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon entropy">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Entropia de Shannon</h3>
+                    <p>Calcula a aleatoriedade real da senha usando teoria da informação</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon keyboard">
+                        <i class="fas fa-keyboard"></i>
+                    </div>
+                    <h3>Padrões de Teclado</h3>
+                    <p>Detecta sequências como "qwerty", "asdf", "12345"</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon context">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Contexto Pessoal</h3>
+                    <p>Simula ataques direcionados usando informações pessoais</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon dictionary">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Wordlist Check</h3>
+                    <p>Verifica contra banco de senhas comuns e variações "leet"</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon pattern">
+                        <i class="fas fa-repeat"></i>
+                    </div>
+                    <h3>Padrões de Repetição</h3>
+                    <p>Identifica caracteres repetidos e padrões previsíveis</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon api">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>API REST</h3>
+                    <p>Integre com suas aplicações via endpoints documentados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Demo Section -->
+    <section class="api-demo" id="docs">
+        <div class="container">
+            <h2 class="section-title">API <span class="gradient-text">Endpoints</span></h2>
+            
+            <div class="endpoints">
+                <div class="endpoint">
+                    <div class="endpoint-method get">GET</div>
+                    <div class="endpoint-path">/health</div>
+                    <div class="endpoint-desc">Verifica status da API</div>
+                    <button class="try-btn" onclick="tryEndpoint('health')">Testar</button>
+                </div>
+                
+                <div class="endpoint">
+                    <div class="endpoint-method post">POST</div>
+                    <div class="endpoint-path">/analyze</div>
+                    <div class="endpoint-desc">Analisa uma senha</div>
+                    <button class="try-btn" onclick="tryEndpoint('analyze')">Testar</button>
+                </div>
+                
+                <div class="endpoint">
+                    <div class="endpoint-method post">POST</div>
+                    <div class="endpoint-path">/analyze-with-context</div>
+                    <div class="endpoint-desc">Análise com contexto</div>
+                    <button class="try-btn" onclick="tryEndpoint('context')">Testar</button>
+                </div>
+            </div>
+            
+            <div class="api-response" id="apiResponse">
+                <pre><code id="responseCode">Clique em "Testar" para ver a resposta da API</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>PassCheck Pro</span>
+                    </div>
+                    <p>Ferramenta educacional para análise de força de senhas</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/MMVonnSeek/" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PassCheck Pro. Projeto do meu portfólio de segurança.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
