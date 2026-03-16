@@ -1,7 +1,5 @@
+# PassCheck Pro
 <div align="center">
- <img src="frontend/assets/logo.png" alt="PassCheck Pro Logo" width="200"/>
-  
- # PassCheck Pro
   
  ### Ferramenta Avançada de Análise de Senhas com Heurísticas Inteligentes
   
