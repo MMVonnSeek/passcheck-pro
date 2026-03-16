@@ -83,9 +83,9 @@
 - **Opções avançadas** com formulário de contexto
 ---
 
-## 🧮 Heurísticas Implementadas
+## Heurísticas Implementadas
 
-### 📊 Score Final
+### Score Final
 | Score | Classificação | Cor | Significado |
 |-------|--------------|-----|-------------|
 | 0-19 | Muito Fraca | 🔴 | Extremamente vulnerável |
