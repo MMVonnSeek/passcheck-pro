@@ -518,9 +518,9 @@ Se você gostou do projeto, não esqueça de:
   
   
 
-[](https://github.com/seu-usuario/passcheck-pro)[https://img.shields.io/github/stars/seu-usuario/passcheck-pro?style=social](https://img.shields.io/github/stars/seu-usuario/passcheck-pro?style=social)  
-[](https://github.com/seu-usuario/passcheck-pro/fork)[https://img.shields.io/github/forks/seu-usuario/passcheck-pro?style=social](https://img.shields.io/github/forks/seu-usuario/passcheck-pro?style=social)  
-[](https://github.com/seu-usuario)[https://img.shields.io/github/followers/seu-usuario?style=social](https://img.shields.io/github/followers/seu-usuario?style=social)
+[![Stars](https://img.shields.io/github/stars/MMVonnSeek/passcheck-pro?style=social)](https://github.com/MMVonnSeek/passcheck-pro/stargazers)
+[![Forks](https://img.shields.io/github/forks/MMVonnSeek/passcheck-pro?style=social)](https://github.com/MMVonnSeek/passcheck-pro/network/members)
+[![Follow](https://img.shields.io/github/followers/MMVonnSeek?style=social)](https://github.com/MMVonnSeek)
 
 <br>
 
