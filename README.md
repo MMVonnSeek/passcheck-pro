@@ -195,9 +195,9 @@ Content-Type: application/json
 curl -X POST http://localhost:5001/analyze-with-context \
  -H "Content-Type: application/json" \
  -d '{
- "password": "joao1990",
+ "password": "maxmuller1990",
  "personal_info": {
- "name": "João",
+ "name": "Max Muller",
  "birth": "1990"
  }
  }'
@@ -211,7 +211,7 @@ curl -X POST http://localhost:5001/analyze-with-context \
  "score": 28,
  "strength": "🟠 Fraca",
  "feedback": [
- "❌ A senha contém informação pessoal: 'joao'",
+ "❌ A senha contém informação pessoal: 'maxmuller'",
  "❌ A senha contém data de nascimento: '1990'",
  "⚠️ Padrão de teclado detectado: '123'. Evite sequências óbvias."
  ],
