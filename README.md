@@ -524,6 +524,6 @@ Se você gostou do projeto, não esqueça de:
 
 <br>
 
-  [⬆ Voltar ao topo](#-passcheck-pro)
+  [Voltar ao topo](#-passcheck-pro)
 
 </div>
