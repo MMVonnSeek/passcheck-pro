@@ -455,7 +455,7 @@ of this software and associated documentation files...
 
 ## Contato
 
-**Seu Nome**
+**Max Muller**
     
 -   **LinkedIn**: [linkedin.com/in/seu-perfil](https://linkedin.com/in/max-muller-685705248/)
 
